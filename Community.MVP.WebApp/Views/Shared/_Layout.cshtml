@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - Community.MVP.WebApp</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- icons ================================================== -->
+    <link rel="stylesheet" href="~/assets/css/icons.css">
+    
+    <!-- CSS ================================================== --> 
+    <link rel="stylesheet" href="~/assets/css/uikit.css">
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <link rel="stylesheet" href="~/css/_Layout.css">
+    <link href=@("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css") rel="stylesheet">
+</head>
+<body class="overflow-x-hidden">
+<div id="wrapper" class="is-collapse">
+    <partial name="_Header"/>
+    <partial name="_Sidebar"/>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - Community.MVP.WebApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script src="~/assets/js/tippy.all.min.js"></script>
+<script src="~/assets/js/uikit.js"></script>
+<script src="~/assets/js/simplebar.js"></script>
+<script src="~/assets/js/custom.js"></script>
+<script src="~/assets/js/bootstrap-select.min.js"></script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
